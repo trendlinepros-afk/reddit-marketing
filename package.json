@@ -1,0 +1,33 @@
+{
+  "name": "wicked-rc",
+  "version": "1.0.0",
+  "description": "Wicked RC — Reddit marketing research pipeline: scans Reddit for relevant posts, drafts AI replies, and emails a daily digest. Never auto-posts.",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "job:daily": "node dist/jobs/daily.js",
+    "migrate": "node dist/migrate.js",
+    "admin": "node dist/admin/cli.js",
+    "dev:job": "npm run build && npm run job:daily",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.3",
+    "@google/genai": "^1.0.0",
+    "form-data": "^4.0.0",
+    "mailgun.js": "^10.2.3",
+    "node-cron": "^3.0.3",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}
