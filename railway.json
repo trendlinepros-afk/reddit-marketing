@@ -5,7 +5,7 @@
     "buildCommand": "npm ci && npm run build"
   },
   "deploy": {
-    "startCommand": "npm run migrate && npm run job:daily",
-    "restartPolicyType": "NEVER"
+    "startCommand": "npm run migrate && npm start",
+    "restartPolicyType": "ON_FAILURE"
   }
 }

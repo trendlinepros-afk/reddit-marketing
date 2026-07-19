@@ -34,7 +34,7 @@ export const config = {
     // <platform>:<app ID>:<version> (by /u/<username>)
     return optional(
       'REDDIT_USER_AGENT',
-      `nodejs:wicked-rc:1.0.0 (by /u/${process.env.REDDIT_USERNAME ?? 'unknown'})`
+      `nodejs:reddit-marketer:1.0.0 (by /u/${process.env.REDDIT_USERNAME ?? 'unknown'})`
     );
   },
 
@@ -70,7 +70,16 @@ export const config = {
     return required('DIGEST_TO_EMAIL');
   },
   get digestFromEmail(): string {
-    return optional('DIGEST_FROM_EMAIL', `Wicked RC <wickedrc@${process.env.MAILGUN_DOMAIN}>`);
+    return optional('DIGEST_FROM_EMAIL', `Reddit Marketer <redditmarketer@${process.env.MAILGUN_DOMAIN}>`);
+  },
+
+  // Admin dashboard (always-on mode)
+  get port(): number {
+    return parseInt(optional('PORT', '3000'), 10);
+  },
+  get adminToken(): string {
+    // Optional shared secret; when set, the dashboard requires ?token=<value>
+    return optional('ADMIN_TOKEN', '');
   },
 
   // Scanner behavior

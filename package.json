@@ -1,7 +1,7 @@
 {
-  "name": "wicked-rc",
+  "name": "reddit-marketer",
   "version": "1.0.0",
-  "description": "Wicked RC — Reddit marketing research pipeline: scans Reddit for relevant posts, drafts AI replies, and emails a daily digest. Never auto-posts.",
+  "description": "Reddit Marketer — Reddit marketing research pipeline: scans Reddit for relevant posts, drafts AI replies, and emails a daily digest. Never auto-posts.",
   "private": true,
   "main": "dist/index.js",
   "scripts": {

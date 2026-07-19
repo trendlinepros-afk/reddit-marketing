@@ -1,4 +1,4 @@
--- Wicked RC initial schema
+-- Reddit Marketer initial schema
 
 CREATE TABLE IF NOT EXISTS businesses (
   id            SERIAL PRIMARY KEY,
